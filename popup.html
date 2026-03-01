@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=420" />
+  <title>PrivacyGuard for Women</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app" class="popup-shell">
+    <header class="tabs" role="tablist" aria-label="PrivacyGuard Tabs">
+      <button class="tab-btn active" data-tab="analyze" role="tab" aria-selected="true">Analyze</button>
+      <button class="tab-btn" data-tab="compare" role="tab" aria-selected="false">Compare</button>
+      <button class="tab-btn" data-tab="history" role="tab" aria-selected="false">History</button>
+    </header>
+
+    <section id="global-status" class="status hidden"></section>
+
+    <section id="loading" class="loading hidden" aria-live="polite">
+      <div class="spinner"></div>
+      <p>Analyzing privacy policy...</p>
+    </section>
+
+    <section id="tab-analyze" class="tab-panel active" role="tabpanel">
+      <div id="analyze-content" class="panel-content"></div>
+    </section>
+
+    <section id="tab-compare" class="tab-panel" role="tabpanel">
+      <div class="panel-content">
+        <div class="card compare-input-card">
+          <h3>Compare Sites</h3>
+          <p class="muted">Current site is shown on the left. Enter another website to compare.</p>
+          <div id="compare-current" class="mini-site">No current analysis yet.</div>
+          <label for="compare-url" class="label">Enter website URL to compare</label>
+          <div class="compare-form-row">
+            <input id="compare-url" type="text" placeholder="example.com" />
+            <button id="run-compare" class="primary-btn">Compare</button>
+          </div>
+        </div>
+        <div id="compare-results"></div>
+      </div>
+    </section>
+
+    <section id="tab-history" class="tab-panel" role="tabpanel">
+      <div class="panel-content">
+        <div id="history-list" class="history-list"></div>
+        <button id="clear-history" class="ghost-btn">Clear History</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

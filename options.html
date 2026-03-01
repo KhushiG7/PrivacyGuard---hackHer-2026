@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PrivacyGuard Options</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+      background: #FEEAC9;
+      color: #000;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .card {
+      max-width: 680px;
+      width: 100%;
+      background: #FFF;
+      border: 2px solid #FDACAC;
+      border-radius: 14px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 24px;
+    }
+    p {
+      margin: 8px 0;
+      line-height: 1.5;
+    }
+    .pill {
+      display: inline-block;
+      background: #FFCDC9;
+      border-radius: 999px;
+      padding: 6px 10px;
+      margin-top: 10px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .key {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      word-break: break-all;
+      background: #FFF7ED;
+      border-radius: 8px;
+      padding: 10px;
+      margin-top: 8px;
+      border: 1px solid #FED7AA;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>PrivacyGuard for Women</h1>
+    <p>This extension analyzes privacy policies and shows a women-focused privacy nutrition label.</p>
+    <p>API key setup is pre-configured in <code>background.js</code> as requested.</p>
+    <div class="pill">Status: Ready to analyze</div>
+    <div class="key" id="api-key-preview"></div>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>

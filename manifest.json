@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "PrivacyGuard for Women",
+  "version": "1.0.0",
+  "description": "Analyze privacy policies with a dedicated women's safety risk label.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "backend.js"
+  },
+  "action": {
+    "default_title": "PrivacyGuard for Women",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
